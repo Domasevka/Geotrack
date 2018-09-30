@@ -1,0 +1,62 @@
+.container
+  section.panel
+    .container-inner.container-inner_sm
+      .row
+        .card.panel__column
+          .place
+            .place__head
+              .place__logo
+                img(src='img/logo_uni.jpg', alt="")
+              span.arrow #6e7c97
+              span.cart__name California University
+              span.cart__coord ID: #6989d2
+              button.btn.btn_md.btn_secondary.btn-fully_secondary Copy in buffer
+
+            .place__info
+              each val in place
+                .place__row
+                  .place__col
+                    strong.place__name=val.name
+                  .place__col
+                    span.place__descr=val.description
+            button(class='btn btn_md btn_main btn-fully_main') Edit Profile
+        .card.panel__column
+          .message
+            a(href="#").message__logo
+              img.header__img(src="img/massage.jpg", alt="Logo")
+            .message__body Multiple Choice Assessment
+              h2.message__name
+          .map
+
+.container
+  footer.footer
+    .container-inner
+      .row.row-flex
+        .footer__column
+          p
+            strong Geotrack
+          p © Geotrack Inc.All rigth reserved 2016
+        .footer__column
+          ul.footer__list
+            li
+              a(href="#") App API
+            li
+              a(href="#") Support
+        .footer__column.socials
+          ul.socials__list
+            li.socials__item
+              a(href="#")
+                +icon("menu", "gray_mod")
+            li.socials__item
+              a(href="#")
+                +icon("menu", "gray_mod")
+            li.socials__item
+              a(href="#")
+                +icon("menu", "gray_mod")
+            li.socials__item
+              a(href="#")
+                +icon("menu", "gray_mod")
+
+
+
+

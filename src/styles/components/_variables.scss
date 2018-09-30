@@ -1,0 +1,42 @@
+$site-width: 1400px;    // ширина сайта
+$gutter: 15px;
+
+$color-main: #ff6364;
+$color-secondary: #e8f4ff;
+$color-secondary-text: #97a3bb;
+
+$gray--lightest: #eee;
+
+$gray--lighten: #949fb3;
+$gray--light: #667191;
+$gray: #3b4b6f;
+
+$gray--dark: #3c4852;
+$gray--darken: #15232d;
+
+
+$color-content-text: $gray;
+$color-content-text-light: $gray--light;
+$color-content-text-lighten: $gray--lighten;
+
+$color-content-bg: #fff;
+$color-content-text: $color-content-bg;
+$color-main-bg: #fafbff;
+
+$color-black: #000;
+$color-success: #ee6767;
+$color-secondary-success: #9fb1ff;
+
+
+
+
+$font-family: 'Lato', 'Tahoma', serif;
+$font: 'Lato', 'Tahoma', sans-serif;
+
+$breakpoint: 1200px;
+
+$sm: 544px;     // Small screen / phone
+$md: 768px;     // Medium screen / tablet
+$lg: 1024px;     // Large screen / desktop
+$xl: 1200px;    // Extra large screen desktop
+$xxl: 1440px;   // Wide desktop
