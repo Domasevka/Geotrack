@@ -3,62 +3,96 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 17px 0;
 
   &__column {
-    @include span(3);
     display: flex;
     align-items: center;
   }
 
+  &__column_logo {
+    @include span(2);
+  }
+
   &__column_nav {
-    @include span(6);
+    @include span(5);
   }
 
   &__column_search {
-    justify-content: flex-end;
+    @include span(5);
+  }
+
+  &__link {
+    margin-left: 40px;
   }
 
   &__img {
-    width: 30px;
-    border: 0;
+    width: 40px;
     border-radius: 100%;
     vertical-align: middle;
   }
-}
-
-.header__logo {
 
 }
 
 .logo {
-  &__img {
-    border: 0;
-    border-radius: 100%;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    margin-right: 16px;
   }
 
+  &__img {
+    vertical-align: center;
+    border: 0;
+    border-radius: 50%;
+  }
+
+  &__descr {
+    @include font(14px, 600);
+
+    span {
+      display: block;
+      @include font(12px);
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
 }
 
 .header__search {
   position: relative;
-  padding-left: 30px;
+  width: 100%;
 
   &-btn {
     position: absolute;
     z-index: 2;
     display: block;
-    //width: 2.375rem;
-    //height: 2.375rem;
-    //line-height: 2.375rem;
     text-align: center;
     pointer-events: none;
     color: #aaa;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+  }
+
+  &-field {
+    width: 100%;
+    background-color: #f7f8fd;
+    border: 1px solid #f7f8fd;
+    border-radius: 4px;
+    color: #9ba2b5;
+    padding: 15px 15px 15px 50px;
   }
 }
-
 
 .nav {
   display: flex;
   justify-content: flex-end;
+
 
   &__list {
     display: flex;
@@ -66,18 +100,21 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 50px;
     }
   }
 
   &__link {
-    @include font(16px, 400);
+    @include font(14px, 200);
 
     border-bottom: 3px solid transparent;
-    //padding-bottom: 26px;
+    text-transform: uppercase;
+    color: #9ba2b5;
+
 
     &:hover {
-      border-bottom-color: #e51b24;
+      font-weight: 500;
+      color: #4e5e7f;
     }
   }
 }

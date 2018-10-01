@@ -5,9 +5,13 @@
         .card.panel__column
           .place
             .place__head
-              .place__logo
-                img(src='img/logo_uni.jpg', alt="")
-              span.arrow #6e7c97
+              .place__head-line
+                .place__logo-wrap
+                    img(src='img/logo_uni.jpg', alt="")
+                span.place__qr
+                          img(src='img/qr.jpg', alt="")
+                a.place__link(href='#')
+
               span.cart__name California University
               span.cart__coord ID: #6989d2
               button.btn.btn_md.btn_secondary.btn-fully_secondary Copy in buffer
@@ -19,43 +23,112 @@
                     strong.place__name=val.name
                   .place__col
                     span.place__descr=val.description
+            .place__row
+              .place__col
+                  strong.place__name Email
+              .place__col
+                  span.place__descr ca@university@gmail.com #6b8dd4
+
             button(class='btn btn_md btn_main btn-fully_main') Edit Profile
         .card.panel__column
           .message
             a(href="#").message__logo
-              img.header__img(src="img/massage.jpg", alt="Logo")
+              img.header__img(src="img/message.jpg", alt="Logo")
             .message__body Multiple Choice Assessment
               h2.message__name
           .map
-
-.container
-  footer.footer
-    .container-inner
-      .row.row-flex
-        .footer__column
-          p
-            strong Geotrack
-          p © Geotrack Inc.All rigth reserved 2016
-        .footer__column
-          ul.footer__list
-            li
-              a(href="#") App API
-            li
-              a(href="#") Support
-        .footer__column.socials
-          ul.socials__list
-            li.socials__item
-              a(href="#")
-                +icon("menu", "gray_mod")
-            li.socials__item
-              a(href="#")
-                +icon("menu", "gray_mod")
-            li.socials__item
-              a(href="#")
-                +icon("menu", "gray_mod")
-            li.socials__item
-              a(href="#")
-                +icon("menu", "gray_mod")
+            h3 My Google Maps Demo
+            <!--The div element for the map -->
+            .map__container#map
+              script.
+                  function initMap() {
+                      // Styles a map in night mode.
+                      var map = new google.maps.Map(document.getElementById('map'), {
+                          center: {lat: 40.674, lng: -73.945},
+                          zoom: 12,
+                          styles: [
+                              {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                              {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                              {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                              {
+                                  featureType: 'administrative.locality',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#d59563'}]
+                              },
+                              {
+                                  featureType: 'poi',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#d59563'}]
+                              },
+                              {
+                                  featureType: 'poi.park',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#263c3f'}]
+                              },
+                              {
+                                  featureType: 'poi.park',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#6b9a76'}]
+                              },
+                              {
+                                  featureType: 'road',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#38414e'}]
+                              },
+                              {
+                                  featureType: 'road',
+                                  elementType: 'geometry.stroke',
+                                  stylers: [{color: '#212a37'}]
+                              },
+                              {
+                                  featureType: 'road',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#9ca5b3'}]
+                              },
+                              {
+                                  featureType: 'road.highway',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#746855'}]
+                              },
+                              {
+                                  featureType: 'road.highway',
+                                  elementType: 'geometry.stroke',
+                                  stylers: [{color: '#1f2835'}]
+                              },
+                              {
+                                  featureType: 'road.highway',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#f3d19c'}]
+                              },
+                              {
+                                  featureType: 'transit',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#2f3948'}]
+                              },
+                              {
+                                  featureType: 'transit.station',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#d59563'}]
+                              },
+                              {
+                                  featureType: 'water',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#17263c'}]
+                              },
+                              {
+                                  featureType: 'water',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#515c6d'}]
+                              },
+                              {
+                                  featureType: 'water',
+                                  elementType: 'labels.text.stroke',
+                                  stylers: [{color: '#17263c'}]
+                              }
+                          ]
+                      });
+                  }
+              script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap' async='' defer='')
 
 
 

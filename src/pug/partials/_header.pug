@@ -1,12 +1,13 @@
 .container
   header.header
     .row.row_flex
-      .header__column
+      .header__column.header__column_logo
         .header__logo.logo
           a.logo__link(href="#")
             img.logo__img(src="img/logo.jpg", alt="Logo")
-          span.logo__text Geotrack
-          span.logo__text var 1.0
+          .logo__descr
+            .logo__text Geotrack
+            span ver 1.0
 
       .header__column.header__column_nav
         nav
@@ -16,8 +17,7 @@
                 a.nav__link(href=val.href)=val.name
       .header__column.header__column_search
         form.header__search
-          span.header__search-btn
-           i
+          i.header__search-btn(role="button")
             +icon("search", "gray_mod")
           input.header__search-field(type="text" placeholder='Search geotrack' name="search")
         .header__item.dropdown

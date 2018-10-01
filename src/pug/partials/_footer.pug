@@ -1,9 +1,28 @@
-footer
-    .footer
-        .container
-            .row
-                nav.footer-nav
-                    each val in footerMenu
-                        a.footer-nav__link(href=val.href)=val.name
-.footer-copyright
-    p © 2015.  All rights reserved.
+.container
+    footer.footer
+        .container-inner
+            .row.row-flex
+                .footer__column
+                    p
+                        strong Geotrack
+                    p © Geotrack Inc.All rigth reserved 2016
+                .footer__column
+                    ul.footer__list
+                        li
+                            a(href="#") App API
+                        li
+                            a(href="#") Support
+                .footer__column.socials
+                    ul.socials__list
+                        li.socials__item
+                            a(href="#")
+                                +icon("menu", "gray_mod")
+                        li.socials__item
+                            a(href="#")
+                                +icon("menu", "gray_mod")
+                        li.socials__item
+                            a(href="#")
+                                +icon("menu", "gray_mod")
+                        li.socials__item
+                            a(href="#")
+                                +icon("menu", "gray_mod")
