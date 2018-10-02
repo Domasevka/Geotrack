@@ -10,22 +10,18 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  //padding-right: $gutter;
-  //padding-left: $gutter;
 }
+
 .container-inner {
-  width: 100%;
+  max-width: 1270px;
   margin-right: auto;
   margin-left: auto;
   padding-right: $gutter;
   padding-left: $gutter;
 
-  &_sm {
-    padding: 0 40px;
-  }
+
 }
-// используется в сочетании с основным контейнером .container
-// аналог row у bootstrap, но с учетом flex-wrap: wrap
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -48,14 +44,30 @@
 
 .card {
   background: #ffffff none repeat scroll 0 0;
-  padding: 20px;
+  padding: 0;
   border: 0 solid #e7e7e7;
   border-radius: 5px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  word-wrap: break-word;
+  //word-wrap: break-word;
   overflow: hidden;
+  flex-grow: 1;
 
-  margin-bottom: 20px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &_inner {
+    padding: 20px;
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    &:last-child {
+      margin-top: auto;
+    }
+  }
 }
 
 

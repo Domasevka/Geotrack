@@ -1,25 +1,28 @@
 .container
   header.header
-    .row.row_flex
-      .header__column.header__column_logo
-        .header__logo.logo
-          a.logo__link(href="#")
-            img.logo__img(src="img/logo.jpg", alt="Logo")
-          .logo__descr
-            .logo__text Geotrack
-            span ver 1.0
+    .container-inner
+      .row.row-flex
+        .header__column.header__column_logo
+          .header__logo.logo
+            a.logo__link(href="#")
+              img.logo__img(src="img/logo.jpg", alt="Logo")
+            .logo__descr
+              h1.logo__text Geotrack
+              span ver 1.0
 
-      .header__column.header__column_nav
-        nav
-          ul.nav__list
-            each val in nav
-              li.nav__item
-                a.nav__link(href=val.href)=val.name
-      .header__column.header__column_search
-        form.header__search
-          i.header__search-btn(role="button")
-            +icon("search", "gray_mod")
-          input.header__search-field(type="text" placeholder='Search geotrack' name="search")
-        .header__item.dropdown
-          a.header__link(href="", role="button").nav-link.dropdown-toggle
-            img.header__img(src="img/user.jpg", alt="Logo")
+        .header__column.header__column_nav
+          nav.nav__list
+            ul.nav__items
+              each val in nav
+                li.nav__item
+                  a.nav__link(href=val.href)=val.name
+          .nav__btn
+            +icon("menu", "gray_mod")
+        .header__column.header__column_search
+          form.header__search
+            button(type="submit").header__search-btn
+              +icon("search", "gray_mod")
+            input.header__search-field(type="text" placeholder='Search geotrack' name="search")
+          .header__item.dropdown
+            a.header__link(href="", role="button").nav-link.dropdown-toggle
+              img.header__img(src="img/user.jpg", alt="Logo")

@@ -33,18 +33,13 @@
 }
 
 .btn_bg {
-  @include font(14px, 400, 14px);
+  @include font(16px, 400, 14px);
 
-  display: flex;
-  justify-content: space-between;
-  padding: 14px 30px;
+  padding: 20px;
   width: 100%;
-  //letter-spacing: 1px;
+  border-radius: 2px;
 }
 
-.btn-fully_main {
-  border: 2px solid;
-}
 
 .btn_md {
   @include font(16px, 400, 16px);
@@ -58,11 +53,10 @@
 .btn_sm {
   @include font(14px, 400, 14px);
 
-  padding: 8px 10px;
+  border-radius: 2px;
+  padding: 10px;
 }
 
-
-// генератор цвета кнопки
 @each $color-name, $color-background, $color, $color-hover, $color-active, $color-disabled in
       (main, $color-main, $color-content-text, $color-success, $color-success, #e3e3e3),
       (secondary, $color-secondary, $color-secondary-text, $color-secondary-success, $color-secondary-success, #e3e3e3),

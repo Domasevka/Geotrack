@@ -2,43 +2,49 @@
   section.panel
     .container-inner.container-inner_sm
       .row
-        .card.panel__column
-          .place
-            .place__head
+        .panel__column
+          .place.card
+            .place__head.card-inner
               .place__head-line
-                .place__logo-wrap
+                .place__head-line_left
+                  .place__logo
                     img(src='img/logo_uni.jpg', alt="")
-                span.place__qr
-                          img(src='img/qr.jpg', alt="")
+                  .place__code
+                    img(src='img/qr.jpg', alt="")
                 a.place__link(href='#')
 
-              span.cart__name California University
-              span.cart__coord ID: #6989d2
-              button.btn.btn_md.btn_secondary.btn-fully_secondary Copy in buffer
+              h2.place__name California University
+              span.place__coord ID: 111111111
+              button.btn.btn_sm.btn_secondary.btn-fully_secondary Copy in buffer
 
-            .place__info
-              each val in place
+            .place__info.card-inner
+                each val in place
+                  .place__row
+                    .place__col
+                      strong.place__item=val.name
+                    .place__col
+                      span.place__descr=val.description
                 .place__row
                   .place__col
-                    strong.place__name=val.name
-                  .place__col
-                    span.place__descr=val.description
-            .place__row
-              .place__col
-                  strong.place__name Email
-              .place__col
-                  span.place__descr ca@university@gmail.com #6b8dd4
-
-            button(class='btn btn_md btn_main btn-fully_main') Edit Profile
-        .card.panel__column
-          .message
-            a(href="#").message__logo
+                      strong.place__item Email:
+                  .place__col.place__col_mail
+                      span.place__descr.place__descr_mail ca@university@gmail.com
+                each val in placeNext
+                  .place__row
+                    .place__col
+                      strong.place__item=val.name
+                    .place__col
+                      span.place__descr=val.description
+            .place__btn.card-inner
+              button.btn.btn_bg.btn_main.btn-fully_main(type='button') Edit Profile
+        .panel__column
+          .card.card_inner.message
+            span.message__logo
               img.header__img(src="img/message.jpg", alt="Logo")
-            .message__body Multiple Choice Assessment
-              h2.message__name
-          .map
-            h3 My Google Maps Demo
-            <!--The div element for the map -->
+            .message__body
+              h2.message__name Geo Message
+              p.message__text The results of yesterdays election came a surprise
+          .card.map
             .map__container#map
               script.
                   function initMap() {
